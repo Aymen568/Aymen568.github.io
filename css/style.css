@@ -139,6 +139,9 @@ h3 {
 	font-size: 110%;
 	border-bottom: none;
 }
+h5, h4 {
+    display: inline ;
+}
 
 p {
 	margin-top: 0.0em;
@@ -295,6 +298,10 @@ span.comment, span.comment > *, span.string, span.string > * {
 @media print {
 	#layout-menu { display: none; }
 }
+
+img {
+	border-radius: 10%;
+  }
 
 #fwtitle {
 	margin: 2px;
