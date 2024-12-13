@@ -3,9 +3,14 @@ table#tlayout {
     border: none;
     border-collapse: separate;
     background: white;
+	height: 100%; /* Ensure the page height is 100% */
+    
 }
 
 body {
+	height: 100%; /* Ensure the page height is 100% */
+    margin: 0; /* Remove default margins */
+    padding: 0;
 	background: white;
 	font-family: Georgia, serif;
 	padding-bottom: 8px;
@@ -13,16 +18,19 @@ body {
 }
 
 #layout-menu {
-	background: #f6f6f6;
-	border: 1px solid #dddddd;
-	padding-top: 0.5em;
-	padding-left: 8px;
-	padding-right: 8px;
-	font-size: 1.0em;
-	width: 175px;
-	white-space: nowrap;
+    background: #f6f6f6;
+    border: 1px solid #dddddd;
+    padding-top: 0.5em;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 1.0em;
+    width: 175px;
+    white-space: nowrap;
     text-align: left;
-    vertical-align: top;
+	height: 100%; /* Table takes full height */
+    border: none;
+    border-collapse: separate;
+    
 }
 
 #layout-menu td {
