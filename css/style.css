@@ -21,10 +21,10 @@ body {
     background: #f6f6f6;
     border: 1px solid #dddddd;
     padding-top: 0.5em;
-    padding-left: 8px;
+    padding-left: 20px;
     padding-right: 8px;
     font-size: 1.0em;
-    width: 175px;
+    width: 185px;
     white-space: nowrap;
     text-align: left;
 	height: 100%; /* Table takes full height */
@@ -37,7 +37,7 @@ body {
 	background: #f4f4f4;
     vertical-align: top;
 	padding-top: 1.0em;
-	padding-left: 1.0em;
+	padding-left: 10.0em;
 	padding-right: 1.0em;
 }
 
@@ -308,7 +308,7 @@ span.comment, span.comment > *, span.string, span.string > * {
 }
 
 img {
-	border-radius: 10%;
+	border-radius: 0%;
   }
 
 #fwtitle {
