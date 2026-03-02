@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-dark-100: #1E2028;
+  --color-dark-200: #171923;
+  --color-dark-300: #12151C;
+  --color-light-100: #f8f9fa;
+  --color-light-200: #e9ecef;
+  --color-light-300: #dee2e6;
+  --color-accent-primary: rgb(244, 244, 248);
+  --color-accent-secondary: #f4f3f5;
+  --color-accent-blue: #60a5fa;
+  --color-accent-green: #4ade80;
+  --color-accent-purple: #a78bfa;
+  --color-accent-orange: #fb923c;
+  --color-accent-pink: #f472b6;
+}
+
+.glass-effect {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.light .glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll reveal animations */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 0.8s ease-out forwards;
+}
+
+/* Initial state for elements before animation */
+section:not(#home) > div {
+  opacity: 0;
+}
+
+/* Stagger child animations */
+.stagger > * {
+  opacity: 0;
+}
+
+.animate-reveal .stagger > * {
+  animation: reveal 0.5s ease-out forwards;
+}
+
+.animate-reveal .stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.animate-reveal .stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.animate-reveal .stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.animate-reveal .stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.animate-reveal .stagger > *:nth-child(5) { animation-delay: 0.5s; }
+.animate-reveal .stagger > *:nth-child(6) { animation-delay: 0.6s; }
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-gray-50 dark:bg-dark-300 text-gray-900 dark:text-gray-100 antialiased transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 hover:scale-105;
+  }
+}
