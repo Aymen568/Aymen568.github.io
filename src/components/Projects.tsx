@@ -1,12 +1,14 @@
 import { Github } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
+const base = import.meta.env.BASE_URL;
+
 
 const projects = [
   {
     title: 'Speech2Text- Real Time conference transcription with question answering',
     description: 'Platform that transcribe sessions in real time, and answers questions in real time based on the transcribed text using a custom trained LLM model.',
-    image: '/src/assets/speech2text.png',
+    image: `${base}assets/speech2text.png`,
     tags: ['Flask', 'Javascript', 'SpeechMatics', 'RAG', 'RabbitMq', 'Vercel'],
     github: 'https://github.com/Aymen568/Speech2Text',
     demo: 'https://demo.com'
@@ -14,7 +16,7 @@ const projects = [
   {
     title: 'AutoQA - Website testing platform',
     description: 'A platform to test websites by generating test cases based on the user input , using LLM tools.',
-    image: '/src/assets/autoqa.jpg',
+    image: `${base}assets/autoqa.jpg`,
     tags: ['React', 'Playright', 'PostgreSQL'],
     github: 'https://github.com/Aymen568/Auto_qa',
     demo: 'https://demo.com'
@@ -22,7 +24,7 @@ const projects = [
   {
     title: 'Task Schedular',
     description: 'A task scheduling platform that allows users to create, manage, and schedule tasks with reminders.',
-    image: '/src/assets/taskschedular.png',
+    image: `${base}assets/taskschedular.png`,
     tags: ['Python', 'Modal', 'React', 'Vercel'],
     github: 'https://github.com/Aymen568/Task_scheduler',
     demo: 'https://demo.com'

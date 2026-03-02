@@ -1,6 +1,8 @@
 import {Github, Linkedin, Mail } from 'lucide-react';
 import { useState } from 'react';
 
+const base = import.meta.env.BASE_URL;
+
 export default function Navbar() {
 
   const navItems = [
@@ -24,7 +26,7 @@ export default function Navbar() {
     <div className="p-6 border-b border-black/5 dark:border-white/10">
       <div className="flex flex-col items-center">
         <img 
-          src="/src/assets/aymen_picture.jpg" 
+          src={`${base}assets/aymen_picture.jpg`} 
           alt="Logo" 
           className="h-32 w-32 rounded-full mb-4 border-2 border-accent-primary/30"
         />
