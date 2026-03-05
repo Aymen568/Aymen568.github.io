@@ -3,7 +3,12 @@ import { useState } from 'react';
 
 const base = import.meta.env.BASE_URL;
 
-export default function Navbar() {
+type NavbarProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
+
+export default function Navbar({ isOpen, onClose }: NavbarProps) {
 
   const navItems = [
     { href: "#about", label: "About" },
@@ -17,10 +22,13 @@ export default function Navbar() {
   const [activeItem, setActiveItem] = useState<string>(navItems[0].href);
   const handleClick = (href: string) => {
     setActiveItem(href);
+    onClose();
   };
 
   return (
-  <nav className={`fixed left-0 top-0 h-screen w-64 z-50 transition-all duration-300 glass-effect flex flex-col`}>
+  <nav className={`fixed left-0 top-0 h-screen w-64 z-50 transition-transform duration-300 glass-effect flex flex-col ${
+    isOpen ? 'translate-x-0' : '-translate-x-full'
+  } md:translate-x-0`}>
 
     {/* Profile Section */}
     <div className="p-6 border-b border-black/5 dark:border-white/10">

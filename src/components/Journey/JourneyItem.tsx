@@ -20,27 +20,27 @@ export default function JourneyItem({
     <div className="hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
       
       {/* Container with date on left and content on right */}
-      <div className="flex items-start">
+      <div className="flex flex-col md:flex-row md:items-start">
         
         {/* Date positioned to the left of the timeline */}
-        <div className="relative w-60 flex-shrink-0 text-right pr-6">
-          <span className="text-sm text-indigo-600 dark:text-accent-primary font-semibold">
+        <div className="relative md:w-60 md:shrink-0 md:text-right md:pr-6 mb-2 md:mb-0">
+          <span className="inline-block text-xs sm:text-sm text-indigo-600 dark:text-accent-primary font-semibold bg-indigo-50 dark:bg-white/10 rounded-full px-2 py-1 md:bg-transparent md:dark:bg-transparent md:rounded-none md:px-0 md:py-0">
             {year}
           </span>
         </div>
 
         {/* Timeline arrow */}
-        <div className="flex-shrink-0 flex items-center">
+        <div className="hidden md:flex shrink-0 items-center">
           <span className="text-indigo-400 dark:text-white text-lg font-bold whitespace-nowrap">---&gt;</span>
         </div>
 
         {/* Content Container */}
-        <div className="flex-grow pl-8 pb-8">
-          <div className="flex items-start gap-4">
+        <div className="grow md:pl-8 pb-8">
+          <div className="flex items-start gap-3 sm:gap-4">
             
             {/* Logo Container */}
             <div 
-              className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden shrink-0 
                 border-2 border-accent-primary/20 group-hover:border-accent-primary 
                 transition-colors bg-white flex items-center justify-center"
             >
@@ -52,15 +52,15 @@ export default function JourneyItem({
             </div>
 
             {/* Text Content */}
-            <div className="flex-grow">
+            <div className="grow">
 
               {/* Title */}
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white transition-colors">
+              <h4 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white transition-colors leading-snug">
                 {title}
               </h4>
 
               {/* Organization Link */}
-              <div className="text-gray-500 dark:text-gray-300">
+              <div className="text-sm sm:text-base text-gray-500 dark:text-gray-300">
                 <a 
                   href={link} 
                   target="_blank" 
@@ -72,7 +72,7 @@ export default function JourneyItem({
               </div>
 
               {/* Description */}
-              <p className="text-gray-500 dark:text-gray-400 mt-1">
+              <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">
                 {description}
               </p>
               

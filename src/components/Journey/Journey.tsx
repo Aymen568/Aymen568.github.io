@@ -31,7 +31,7 @@ export default function Journey() {
             
             <div className="relative space-y-2 stagger">
               {/* Continuous timeline line */}
-              <div className="absolute left-[15rem] top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-white" />
+              <div className="hidden md:block absolute left-[15rem] top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-white" />
               {experience.map((exp) => (
                 <JourneyItem
                   key={exp.id}
@@ -57,7 +57,7 @@ export default function Journey() {
             
             <div className="relative space-y-2 stagger">
               {/* Continuous timeline line */}
-              <div className="absolute left-[15rem] top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-white" />
+              <div className="hidden md:block absolute left-[15rem] top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-white" />
               {education.map((edu) => (
                 <JourneyItem
                   key={edu.id}
