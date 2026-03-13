@@ -65,7 +65,7 @@ export const experience: Experience[] = [
     role: "Machine Learning Intern",
     company: "SAGEMCOM",
     year: "Sep 2023 - Jan 2024",
-    description: "I analyzed electricity and gas consumption data, applying down-sampling techniques to handle class imbalance and trained LightGBM, CatBoost, and XGBoost models with Optuna hyper-params optimization to achieve 87.59% precision through ensemble learning. I trained an OCR model using Mindee on electricity invoices to accurately extract relevant billing data. Finbally, I integrated the OCR pipeline into a Flask application with MongoDB for production access.",
+    description: "I engineered features from electricity and gas consumption data, trained LightGBM, CatBoost, and XGBoost with Optuna optimization achieving 87.59% precision. I also trained a Mindee OCR model on electricity invoices for billing data extraction, then integrated it into a Flask/MongoDB application.",
     logoPath: `${base}assets/Sagemcom.png`,
     companyLink: "https://www.sagemcom.com/"
   },
