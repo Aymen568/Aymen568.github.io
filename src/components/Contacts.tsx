@@ -131,7 +131,7 @@ export default function Contact() {
                   className={`mt-1 block w-full rounded-lg bg-white dark:bg-dark-300 text-gray-900 dark:text-white border px-3 py-2 text-sm ${
                     errors.email ? "border-red-400" : "border-gray-200 dark:border-accent-primary/20"
                   } focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:focus:ring-accent-primary/50`}
-                  placeholder="your@email.com"
+                  placeholder="mail@mailprovider.com"
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
               </div>
